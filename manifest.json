@@ -1,0 +1,16 @@
+{
+  "name": "base-music-generator-v0",
+  "short_name": "base-music-g",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#050507",
+  "theme_color": "#FF1493",
+  "icons": [
+    {
+      "src": "./logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
