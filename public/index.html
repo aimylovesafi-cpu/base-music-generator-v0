@@ -1,0 +1,16 @@
+<script>
+let currentTrack = null;
+async function fetchGroqTrack(){
+ const genre = GENRE;
+ const prompt = document.getElementById('prompt').value;
+ document.getElementById('status').innerText = `🧠 Groq AI thinking... ${genre}`;
+ const res = await fetch('/api/generate-track', {
+ method:'POST', headers:{'Content-Type':'application/json'},
+ body: JSON.stringify({ genre, prompt })
+ });
+ currentTrack = await res.json();
+ document.getElementById('status').innerText = `♾️ Groq Generated: ${genre} | ${currentTrack.bpm} BPM | ${currentTrack.mood}`;
+ return currentTrack;
+}
+‎// توی scheduler از currentTrack.bass_pattern و... استفاده کن
+</script>
